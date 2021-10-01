@@ -1,21 +1,24 @@
 package com.batchproject.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table
 public class Admin {
 
-    private int ID;
+    @Id
+    @GeneratedValue
+    private Integer ID;
     private String userName;
     private String password;
+    private String role;
 
 }
